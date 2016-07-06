@@ -36,7 +36,7 @@ class Tamagotchi
   end
 
   define_method(:is_model) do
-    if food_level < 5 && food_level > 0 && activity_level == 0 
+    if food_level < 5 && food_level > 0 && activity_level == 0
       true
     else
       false
@@ -50,4 +50,23 @@ class Tamagotchi
       false
     end
   end
+
+  define_method(:eat) do
+    self.food_level += 1
+  end
+
+  define_method(:nap) do
+    self.sleep_level += 1
+  end
+
+  define_method(:play) do
+    self.activity_level += 1
+  end
+
+  define_method(:time_passes) do
+    self.food_level -= 1
+    self.sleep_level -= 1
+    self.activity_level -= 1
+  end
+
 end
