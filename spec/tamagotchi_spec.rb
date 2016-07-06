@@ -76,7 +76,7 @@ describe(Tamagotchi) do
   describe("#time_passes") do
     it("decreases the Tamagotchi's food, sleep, and activity levels by 1") do
       my_pet = Tamagotchi.new("lil dragon")
-      my_pet.time_passes()  #decide what trigger you will use to make time pass
+      my_pet.time_passes()  
       expect(my_pet.food_level()).to(eq(9))
       expect(my_pet.sleep_level()).to(eq(9))
       expect(my_pet.activity_level()).to(eq(9))

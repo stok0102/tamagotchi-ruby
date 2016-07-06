@@ -1,0 +1,14 @@
+<form class="" action="/name" method="post">
+  <label for="name">Your Tamagotchi's Name:</label>
+  <input type="text" name="name">
+  <button type="submit" id="name">Hatch</button>
+</form>
+
+<div id='tamagotchi'>
+  <h2><%= @name %></h2>
+  <p><%= @food %></p>
+</div>
+
+<form class="" action="/eat" method="get">
+  <button type="submit" id="eat" name="eat">Eat</button>
+</form>

@@ -1,12 +1,5 @@
 class Tamagotchi
-  attr_accessor :name
-  attr_accessor :food_level
-  attr_accessor :sleep_level
-  attr_accessor :activity_level
-  attr_accessor :is_alive
-  attr_accessor :is_zombie
-  attr_accessor :is_model
-  attr_accessor :is_obese
+  attr_accessor(:name, :food_level, :sleep_level, :activity_level, :is_alive, :is_zombie, :is_model, :is_obese)
 
   define_method(:initialize) do |name|
     @food_level = 10
