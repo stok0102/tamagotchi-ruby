@@ -4,11 +4,21 @@
   <button type="submit" id="name">Hatch</button>
 </form>
 
-<div id='tamagotchi'>
-  <h2><%= @name %></h2>
-  <p><%= @food %></p>
-</div>
+<% if @@food || @@sleep || @@play %>
+  <div id='tamagotchi'>
+    <h2><%= @@name %></h2>
+    <p>Hunger: <%= @@food %></p>
+    <p>Energy: <%= @@sleep %></p>
+    <p>Stimulation: <%= @@play %></p>
+  </div>
+<% end %>
 
 <form class="" action="/eat" method="get">
   <button type="submit" id="eat" name="eat">Eat</button>
+</form>
+<form class="" action="/sleep" method="get">
+  <button type="submit" id="sleep" name="sleep">Sleep</button>
+</form>
+<form class="" action="/play" method="get">
+  <button type="submit" id="play" name="play">Play</button>
 </form>
