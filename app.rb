@@ -1,7 +1,6 @@
 require ('sinatra')
 require ('sinatra/reloader')
 require ('./lib/tamagotchi')
-require ('rufus/scheduler')
 also_reload ('lib/**/*.rb')
 
 get('/') do
